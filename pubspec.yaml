@@ -1,0 +1,27 @@
+name: ember_quest
+description: "Ember Quest game"
+version: 0.0.0
+publish_to: none
+
+environment:
+  sdk: ^3.0.0
+  flutter: ^3.13.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flame: ^1.27.0
+  window_manager: ^0.3.7
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  assets:
+    - assets/images/
+  fonts:
+    - family: MedodicaRegular
+      fonts:
+        - asset: fonts/MedodicaRegular.otf
