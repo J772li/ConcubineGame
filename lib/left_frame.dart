@@ -1,4 +1,5 @@
 import 'package:flame/components.dart';
+import 'package:flame_audio/flame_audio.dart';
 import 'package:flutter/material.dart';
 import 'chat_box.dart';
 import 'script/script.dart';
@@ -122,6 +123,7 @@ class LeftFrame extends SpriteAnimationComponent
           growingBox: true,
           margins: const EdgeInsets.all(chatBoxMargin),
         ));
+    FlameAudio.play('button-click.mp3');
     add(chatBox);
     count = count + 1;
     _chatBoxes.add(chatBox);

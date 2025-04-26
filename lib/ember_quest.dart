@@ -1,5 +1,6 @@
 import 'package:flame/game.dart';
 import 'package:flame/components.dart';
+import 'package:flame_audio/flame_audio.dart';
 import 'package:flutter/material.dart';
 import 'package:flame/events.dart';
 import 'left_frame.dart';
@@ -38,6 +39,10 @@ class EmberQuest extends FlameGame with TapCallbacks {
 
   @override
   Future<void> onLoad() async {
+    await FlameAudio.bgm.initialize();
+    FlameAudio.audioCache.load('button-click.mp3');
+    FlameAudio.bgm.play('bg-music.wav', volume: 0.3);
+
     await images.loadAll(imageList);
     // Add background animation directly to the game (not the world)
     add(BackgroundAnimation());
