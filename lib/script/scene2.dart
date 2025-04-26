@@ -174,7 +174,7 @@ const obeyLakeScript = [
         CharacterChart(name: CharacterName.jas, emotion: Emotion.angry),
       ]),
   ScriptItem(
-      script: 'I did what I have to do. Only dead man won`t talk.',
+      script: 'I did what I have to do. Only dead men won't talk.',
       speaker: CharacterName.system),
   ScriptItem(
       script:
@@ -185,7 +185,7 @@ const obeyLakeScript = [
       speaker: CharacterName.system),
   ScriptItem(
       script:
-          'You didn`t say anything, but thinks about the last glaze the Emperor gave you, he is so smart and definitely smells something fishy.'),
+          'You didn`t say anything, but thinks about the last glance the Emperor gave you, he is so smart and definitely smells something fishy.'),
   ScriptItem(
       script:
           'Why can`t I just tell the truth? Won`t they just be together happily ever after?',

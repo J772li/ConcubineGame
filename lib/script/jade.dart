@@ -62,11 +62,11 @@ const jadeScript = [
       ]),
   ScriptItem(
       script:
-          'It doesn`t matter. I`m the system and I knows everything in all universe.',
+          'It doesn`t matter. I`m the system and I know everything in all universes.',
       speaker: CharacterName.system),
   ScriptItem(
       script:
-          'Enough talking, let`s get back to work. I put the pandent on the Emperor`s desk, and left a note inviting him to meet you in the back garden.',
+          'Enough talking, let`s get back to work. I put the pendant on the Emperor`s desk, and left a note inviting him to meet you in the back garden.',
       speaker: CharacterName.system),
   ScriptItem(
       script: '[I need to get this done.]',
@@ -185,7 +185,7 @@ const jadeHonestScript = [
       characterChanges: [
         CharacterChart(name: CharacterName.theEmperor, emotion: Emotion.tears),
       ]),
-  ScriptItem(script: 'The emperor asked desparately.'),
+  ScriptItem(script: 'The emperor asked desperately.'),
   ScriptItem(
       script:
           'Your majesty, I`m sincerely sorry. But I think you also noticed that the Empress is your true love...I can`t hold it anymore.',
@@ -211,7 +211,7 @@ const jadeHonestScript = [
       script:
           'He said it with absolute certainty, as if sealing my fate once and for all.'),
   ScriptItem(
-      script: '[Ops, this is not good...Did I make the right choice?]',
+      script: '[Oops, this is not good...Did I make the right choice?]',
       speaker: CharacterName.jas,
       characterChanges: [
         CharacterChart(name: CharacterName.jas, emotion: Emotion.tears),

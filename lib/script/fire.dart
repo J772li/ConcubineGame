@@ -76,7 +76,7 @@ const trueEndingScript = [
       script: '...I thought you don`t know...', speaker: CharacterName.andrew),
   ScriptItem(
       script:
-          'I guess you really want to lore the dark side of me...that`s why the Empress looks like my mother...',
+          'I guess you really want to lure the dark side of me...that`s why the Empress looks like my mother...',
       speaker: CharacterName.jas),
   ScriptItem(
       script:

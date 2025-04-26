@@ -3,7 +3,8 @@ import 'package:ember_quest/script/script.dart';
 const openScript = [
   ScriptItem(script: '...', speaker: CharacterName.unknown),
   ScriptItem(script: '......Jas?', speaker: CharacterName.unknown),
-  ScriptItem(script: 'Jas, you need wake up.', speaker: CharacterName.unknown),
+  ScriptItem(
+      script: 'Jas, you need to wake up.', speaker: CharacterName.unknown),
   ScriptItem(
       script: '......uhh.........',
       speaker: CharacterName.jas,
@@ -19,7 +20,7 @@ const openScript = [
       speaker: CharacterName.unknown),
   ScriptItem(
       script:
-          'What the f*ck emperor? I was working til dawn for 48 hrs straight...And who is talking to me in ths robostic voice?',
+          'What the f*ck emperor? I was working til dawn for 48 hrs straight...And who is talking to me in this robotic voice?',
       speaker: CharacterName.jas,
       characterChanges: [
         CharacterChart(name: CharacterName.jas, emotion: Emotion.angry),
@@ -55,7 +56,7 @@ const openScript = [
           'Immediately, I feel so much better, the broken snow globe is fixed and put back on the shelf again.'),
   ScriptItem(
       script:
-          '-- My head starts to run again, superisingly I handled the fact that I respawed in a novel pretty well. Since I`m always reading respawn novels after work, that`s my only leasure.'),
+          '-- My head starts to run again, surprisingly I handled the fact that I respawed in a novel pretty well. Since I`m always reading respawn novels after work, that`s my only leisure.'),
   ScriptItem(
       script:
           'You don`t understand, I need to go back, there is something very important... I need to do.',
