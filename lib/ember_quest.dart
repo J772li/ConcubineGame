@@ -1,3 +1,4 @@
+import 'package:ember_quest/main_menu.dart';
 import 'package:flame/game.dart';
 import 'package:flame/components.dart';
 import 'package:flame_audio/flame_audio.dart';
@@ -10,23 +11,27 @@ import './script/script.dart';
 import 'avatar.dart';
 
 class EmberQuest extends FlameGame with TapCallbacks {
+  MainMenu? _mainMenu;
   late LeftFrame _leftFrame;
   late RightPanel _rightPanel;
 
   bool isTapping = false;
   double tapTimer = 2.0;
+  bool _useTap = false;
 
   @override
   void update(double dt) {
     super.update(dt);
 
-    if (isTapping) {
-      tapTimer -= dt;
-      if (tapTimer <= 0.0) {
-        _advanceOnce();
+    if (_useTap) {
+      if (isTapping) {
+        tapTimer -= dt;
+        if (tapTimer <= 0.0) {
+          _advanceOnce();
+        }
+      } else {
+        tapTimer = 2.0;
       }
-    } else {
-      tapTimer = 2.0;
     }
   }
 
@@ -47,6 +52,14 @@ class EmberQuest extends FlameGame with TapCallbacks {
     // Add background animation directly to the game (not the world)
     add(BackgroundAnimation());
 
+    _loadMainMenu();
+  }
+
+  void _loadMainMenu() {
+    add(_mainMenu = MainMenu());
+  }
+
+  void loadGame() {
     // Then add the left frame to the world
     _leftFrame = LeftFrame(position: Vector2(50, 50));
     world.add(_leftFrame);
@@ -118,4 +131,5 @@ const imageList = [
   'jas_cryhappy.png',
   'bad_ending.png',
   'good_ending.png',
+  'title.png',
 ];
