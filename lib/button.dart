@@ -4,7 +4,8 @@ import 'package:flutter/material.dart';
 import 'ember_quest.dart';
 import 'consts.dart';
 
-class Button extends PositionComponent with TapCallbacks, HasGameReference<EmberQuest> {
+class Button extends PositionComponent
+    with TapCallbacks, HasGameReference<EmberQuest> {
   final String text;
   final VoidCallback onPressed;
   final double padding = 10.0;
@@ -13,15 +14,17 @@ class Button extends PositionComponent with TapCallbacks, HasGameReference<Ember
     required this.text,
     required this.onPressed,
     required Vector2 position,
-    required Vector2 size,
-  }) : super(position: position, size: size);
+    super.anchor = Anchor.topLeft,
+  }) : super(position: position);
+
+  @override
+  void onLoad() {
+    super.onLoad();
+    size = Vector2(game.size.x * 0.47, 50);
+  }
 
   @override
   void render(Canvas canvas) {
-    size = Vector2(
-      game.size.x * 0.47,
-      50
-    );
     // Draw background
     final borderPaint = Paint()
       ..color = const Color.fromARGB(255, 38, 57, 53)
@@ -30,12 +33,11 @@ class Button extends PositionComponent with TapCallbacks, HasGameReference<Ember
     canvas.drawRect(
       Rect.fromLTWH(0, 0, size.x, size.y),
       borderPaint,
-      
     );
 
     // Draw text
     final textSpan = TextSpan(
-      text: text, 
+      text: text,
       style: const TextStyle(
         color: Colors.white,
         fontSize: fontSize,

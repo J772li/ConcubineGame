@@ -1,3 +1,4 @@
+import 'package:ember_quest/button.dart';
 import 'package:flame/components.dart';
 import 'package:flutter/material.dart';
 import 'ember_quest.dart';
@@ -12,7 +13,7 @@ class PixelAnimation extends PositionComponent
   TimerComponent? _holdTimer;
   bool _isEnding = false;
   bool _isGoodEnding = false;
-  
+
   PixelAnimation({required bool isEnding, bool? isGoodEnding}) {
     _isEnding = isEnding;
     _isGoodEnding = isGoodEnding ?? false;
@@ -20,7 +21,6 @@ class PixelAnimation extends PositionComponent
 
   @override
   Future<void> onLoad() async {
-    print("isEnding: $_isEnding");
     // Calculate how many pixels we need
     final xCount = (game.size.x / _pixelSize).ceil();
     final yCount = (game.size.y / _pixelSize).ceil();
@@ -87,6 +87,25 @@ class PixelAnimation extends PositionComponent
         },
       );
       add(_animationTimer!);
+      if (_isGoodEnding) {
+        add(SpriteComponent(
+          sprite: Sprite(game.images.fromCache('good_ending.png')),
+          size: Vector2(game.size.x, game.size.y),
+        ));
+      } else {
+        add(SpriteComponent(
+          sprite: Sprite(game.images.fromCache('bad_ending.png')),
+          size: Vector2(game.size.x, game.size.y),
+        ));
+      }
+      add(Button(
+        text: "play again?",
+        onPressed: () {
+          game.leftFrame.restartGame();
+        },
+        position: Vector2(game.size.x / 2, 600),
+        anchor: Anchor.center,
+      ));
     }
   }
 

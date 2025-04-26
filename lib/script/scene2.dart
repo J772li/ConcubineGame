@@ -30,12 +30,14 @@ const honestLakeScript = [
       script: 'The Emperor looked at you, his gaze slowly turning cold.'),
   ScriptItem(
       script: 'Everytime...I trusted you...and you`ve been lying to me...',
-      speaker: CharacterName.theEmperor, 
+      speaker: CharacterName.theEmperor,
       characterChanges: [
-        CharacterChart(name: CharacterName.theEmperor, emotion: Emotion.angrytalk),
+        CharacterChart(
+            name: CharacterName.theEmperor, emotion: Emotion.angrytalk),
       ]),
   ScriptItem(
-      script: 'Your majesty, I can explain...', speaker: CharacterName.jas,
+      script: 'Your majesty, I can explain...',
+      speaker: CharacterName.jas,
       characterChanges: [
         CharacterChart(name: CharacterName.jas, emotion: Emotion.cryhappy),
       ]),
@@ -52,7 +54,9 @@ const honestLakeScript = [
       script:
           'Great. You can`t even finish a simple task...This is what I have to deal with.',
       speaker: CharacterName.system),
-  ScriptItem(script: 'Who is the Empress?', speaker: CharacterName.jas,
+  ScriptItem(
+      script: 'Who is the Empress?',
+      speaker: CharacterName.jas,
       characterChanges: [
         CharacterChart(name: CharacterName.jas, emotion: Emotion.angry),
       ]),
@@ -62,7 +66,8 @@ const honestLakeScript = [
       speaker: CharacterName.system),
   ScriptItem(
       script: 'Why do I feel disgusted when I look at her? Who is she, really?',
-      speaker: CharacterName.jas, characterChanges: [
+      speaker: CharacterName.jas,
+      characterChanges: [
         CharacterChart(name: CharacterName.jas, emotion: Emotion.angry),
       ]),
   ScriptItem(
@@ -85,7 +90,7 @@ const honestLakeScript = [
 
 const obeyLakeScript = [
   ScriptItem(
-      script: 'Your majesty, my bully hurts so much! Our baby is gone...',
+      script: 'Your majesty, my belly hurts so much! Our baby is gone...',
       speaker: CharacterName.jas,
       characterChanges: [
         CharacterChart(name: CharacterName.jas, emotion: Emotion.tears),
@@ -101,7 +106,8 @@ const obeyLakeScript = [
           'My dear, I should have protected you and our child... this b*tch.',
       speaker: CharacterName.theEmperor,
       characterChanges: [
-        CharacterChart(name: CharacterName.theEmperor, emotion: Emotion.angrytalk),
+        CharacterChart(
+            name: CharacterName.theEmperor, emotion: Emotion.angrytalk),
       ]),
   ScriptItem(
       script:
@@ -117,9 +123,10 @@ const obeyLakeScript = [
       ]),
   ScriptItem(
       script: 'This needs to come to an end! Guards, take her...',
-      speaker: CharacterName.theEmperor, 
+      speaker: CharacterName.theEmperor,
       characterChanges: [
-        CharacterChart(name: CharacterName.theEmperor, emotion: Emotion.angrytalk),
+        CharacterChart(
+            name: CharacterName.theEmperor, emotion: Emotion.angrytalk),
       ]),
   ScriptItem(script: 'Wait a second!', speaker: CharacterName.unknown),
   ScriptItem(
@@ -139,7 +146,8 @@ const obeyLakeScript = [
       script: '!!!!!Doctor!!! where is the doctor!!!',
       speaker: CharacterName.theEmperor,
       characterChanges: [
-        CharacterChart(name: CharacterName.theEmperor, emotion: Emotion.angrytalk),
+        CharacterChart(
+            name: CharacterName.theEmperor, emotion: Emotion.angrytalk),
       ]),
   ScriptItem(
       script:
@@ -151,7 +159,8 @@ const obeyLakeScript = [
       ]),
   ScriptItem(
       script: 'System! Did you do something to the kid?',
-      speaker: CharacterName.jas, characterChanges: [
+      speaker: CharacterName.jas,
+      characterChanges: [
         CharacterChart(name: CharacterName.jas, emotion: Emotion.angry),
       ]),
   ScriptItem(
@@ -160,7 +169,8 @@ const obeyLakeScript = [
       speaker: CharacterName.system),
   ScriptItem(
       script: 'What did you do to him? He`s just a child!',
-      speaker: CharacterName.jas, characterChanges: [
+      speaker: CharacterName.jas,
+      characterChanges: [
         CharacterChart(name: CharacterName.jas, emotion: Emotion.angry),
       ]),
   ScriptItem(
@@ -179,7 +189,8 @@ const obeyLakeScript = [
   ScriptItem(
       script:
           'Why can`t I just tell the truth? Won`t they just be together happily ever after?',
-      speaker: CharacterName.jas, characterChanges: [
+      speaker: CharacterName.jas,
+      characterChanges: [
         CharacterChart(name: CharacterName.jas, emotion: Emotion.angry),
       ]),
   ScriptItem(

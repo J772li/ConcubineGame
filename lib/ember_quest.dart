@@ -11,6 +11,31 @@ import 'avatar.dart';
 class EmberQuest extends FlameGame with TapCallbacks {
   late LeftFrame _leftFrame;
   late RightPanel _rightPanel;
+
+  bool isTapping = false;
+  double tapTimer = 2.0;
+
+  @override
+  void update(double dt) {
+    super.update(dt);
+
+    if (isTapping) {
+      tapTimer -= dt;
+      if (tapTimer <= 0.0) {
+        _advanceOnce();
+      }
+    } else {
+      tapTimer = 2.0;
+    }
+  }
+
+  void _advanceOnce() {
+    if (_rightPanel.children.whereType<Avatar>().isEmpty) {
+      _rightPanel.avatarAction();
+    }
+    _leftFrame.chatBoxAction();
+  }
+
   @override
   Future<void> onLoad() async {
     await images.loadAll(imageList);
@@ -39,10 +64,18 @@ class EmberQuest extends FlameGame with TapCallbacks {
 
   @override
   void onTapDown(TapDownEvent event) {
-    if (_rightPanel.children.whereType<Avatar>().isEmpty) {
-      _rightPanel.avatarAction();
-    }
-    _leftFrame.chatBoxAction();
+    isTapping = true;
+    _advanceOnce();
+  }
+
+  @override
+  void onTapUp(TapUpEvent event) {
+    isTapping = false;
+  }
+
+  @override
+  void onTapCancel(TapCancelEvent event) {
+    isTapping = false;
   }
 
   @override
@@ -52,6 +85,8 @@ class EmberQuest extends FlameGame with TapCallbacks {
   }
 
   RightPanel get rightPanel => _rightPanel;
+
+  LeftFrame get leftFrame => _leftFrame;
 
   // Future<void> saveGame() async {
   // final prefs = await SharedPreferences.getInstance();
@@ -76,4 +111,6 @@ const imageList = [
   'jas_talk.png',
   'jas_tears.png',
   'jas_cryhappy.png',
+  'bad_ending.png',
+  'good_ending.png',
 ];

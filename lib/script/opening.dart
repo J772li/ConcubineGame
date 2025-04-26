@@ -28,7 +28,8 @@ const openScript = [
       script:
           'Long story short. I`m your system, and you are in the novel you were reading before your trip started.',
       speaker: CharacterName.unknown),
-  ScriptItem(script: 'Wait a second, I`m dead?',
+  ScriptItem(
+      script: 'Wait a second, I`m dead?',
       speaker: CharacterName.jas,
       characterChanges: [
         CharacterChart(name: CharacterName.jas, emotion: Emotion.talk),
@@ -37,9 +38,12 @@ const openScript = [
       script:
           'Yes, you were dead, but luckily reborn to a novel! Just like all the novels you read, now get up and complete the mission.',
       speaker: CharacterName.system),
-  ScriptItem(script: '...What mission?', speaker: CharacterName.jas, characterChanges: [
-    CharacterChart(name: CharacterName.jas, emotion: Emotion.angry),
-  ]),
+  ScriptItem(
+      script: '...What mission?',
+      speaker: CharacterName.jas,
+      characterChanges: [
+        CharacterChart(name: CharacterName.jas, emotion: Emotion.angry),
+      ]),
   ScriptItem(
       script:
           'I made a sound, cannot even recognize it is a human voice, it`s more like someone accidentally tugged the string of an old instrument.'),
@@ -55,7 +59,8 @@ const openScript = [
   ScriptItem(
       script:
           'You don`t understand, I need to go back, there is something very important... I need to do.',
-      speaker: CharacterName.jas, characterChanges: [
+      speaker: CharacterName.jas,
+      characterChanges: [
         CharacterChart(name: CharacterName.jas, emotion: Emotion.angry),
       ]),
   ScriptItem(
@@ -89,22 +94,26 @@ const openScript = [
   ScriptItem(
       script:
           'I`ve always been dreaming to come to ancient China! It`s just bad timing for me...',
-      speaker: CharacterName.jas, characterChanges: [
-    CharacterChart(name: CharacterName.jas, emotion: Emotion.cryhappy),
-  ]),
+      speaker: CharacterName.jas,
+      characterChanges: [
+        CharacterChart(name: CharacterName.jas, emotion: Emotion.cryhappy),
+      ]),
   ScriptItem(
       script:
           '......yeah sure, but if you don`t complete your mission, you will die.',
       speaker: CharacterName.system),
-  ScriptItem(script: '...the f*ck?', speaker: CharacterName.jas, characterChanges: [
-    CharacterChart(name: CharacterName.jas, emotion: Emotion.angry),
-  ]),
+  ScriptItem(
+      script: '...the f*ck?',
+      speaker: CharacterName.jas,
+      characterChanges: [
+        CharacterChart(name: CharacterName.jas, emotion: Emotion.angry),
+      ]),
   ScriptItem(
       script:
           'The system briefly explained the situation to me. I`m reborn to this Qi Dynasty, which is not in real history but uses ancient Chinese setup.',
-          characterChanges: [
-            CharacterChart(name: CharacterName.jas, emotion: Emotion.dark),
-          ]),
+      characterChanges: [
+        CharacterChart(name: CharacterName.jas, emotion: Emotion.dark),
+      ]),
   ScriptItem(
       script:
           'This is a Mary Sue novel. I am using the body of this villainous concubine, whose only purpose is to expedite the romance between the emperor and the empress.'),
@@ -135,7 +144,8 @@ const openScript = [
           'Phew...that was a lot of words...Your mission is to stick with the plan, be villainous and reckless as you can.',
       speaker: CharacterName.system),
   ScriptItem(
-      script: '...Why can`t I just be honest?', speaker: CharacterName.jas,
+      script: '...Why can`t I just be honest?',
+      speaker: CharacterName.jas,
       characterChanges: [
         CharacterChart(name: CharacterName.jas, emotion: Emotion.talk),
       ]),
@@ -158,16 +168,20 @@ const openScript = [
   ),
   ScriptItem(
       script: 'If I stick with the plan, won`t I die in the end?',
-      speaker: CharacterName.jas, characterChanges: [
-    CharacterChart(name: CharacterName.jas, emotion: Emotion.angry),
-  ]),
+      speaker: CharacterName.jas,
+      characterChanges: [
+        CharacterChart(name: CharacterName.jas, emotion: Emotion.angry),
+      ]),
   ScriptItem(
       script:
           'Yes you will, but I will save your soul and return you back to your real body, don`t you have work to do?',
       speaker: CharacterName.system),
-  ScriptItem(script: 'I...how did you know?', speaker: CharacterName.jas, characterChanges: [
-    CharacterChart(name: CharacterName.jas, emotion: Emotion.dark),
-  ]),
+  ScriptItem(
+      script: 'I...how did you know?',
+      speaker: CharacterName.jas,
+      characterChanges: [
+        CharacterChart(name: CharacterName.jas, emotion: Emotion.dark),
+      ]),
   ScriptItem(
       script:
           'I`m about to say something more, but then I heard someone announcing, "The Emperor has arrived!"'),
@@ -176,21 +190,22 @@ const openScript = [
   ScriptItem(
       script:
           'What met my eyes was a handsome face. His brows were like swords, his eyes bright as stars, and his nose bridge was high and straight, giving him a look of both strength and elegance. Any women will fell in love with this guy.',
-          characterChanges: [
-            CharacterChart(name: CharacterName.theEmperor, emotion: Emotion.cry),
-          ]),
+      characterChanges: [
+        CharacterChart(name: CharacterName.theEmperor, emotion: Emotion.cry),
+      ]),
   ScriptItem(
       script:
           'However, this handsome face was now furrowed in a deep frown, his expression full of worry,',
-          characterChanges: [
-            CharacterChart(name: CharacterName.theEmperor, emotion: Emotion.cry),
-          ]),
+      characterChanges: [
+        CharacterChart(name: CharacterName.theEmperor, emotion: Emotion.cry),
+      ]),
   ScriptItem(
       script:
           'Jassie, my love, how are you feeling? This filthy empress...I will kill her!',
       speaker: CharacterName.theEmperor,
       characterChanges: [
-        CharacterChart(name: CharacterName.theEmperor, emotion: Emotion.angrytalk),
+        CharacterChart(
+            name: CharacterName.theEmperor, emotion: Emotion.angrytalk),
       ]),
   ScriptItem(
       script:
@@ -206,9 +221,10 @@ const openScript = [
           'You looked at the Emperor with tear-filled eyes, unable to say a word. Seeing you so pitiful, the Emperor grew even angrier.'),
   ScriptItem(
       script: 'Empress...look what have you done! Get the hell in of here!',
-      speaker: CharacterName.theEmperor, 
+      speaker: CharacterName.theEmperor,
       characterChanges: [
-        CharacterChart(name: CharacterName.theEmperor, emotion: Emotion.angrytalk),
+        CharacterChart(
+            name: CharacterName.theEmperor, emotion: Emotion.angrytalk),
       ]),
   ScriptItem(
       script:
@@ -216,15 +232,16 @@ const openScript = [
   ScriptItem(
       script:
           'This woman looks familiar, even though you`re sure you`ve never met her before. She must be the Empress. Despite her beauty, you can`t feel anything good about her—looking at her even makes you a little uneasy.',
-          characterChanges: [
-            CharacterChart(name: CharacterName.theEmpress, emotion: Emotion.tears),
-          ]),
+      characterChanges: [
+        CharacterChart(name: CharacterName.theEmpress, emotion: Emotion.tears),
+      ]),
   ScriptItem(
       script:
           '[The empress really looks like me...is it because I`m supposed to be her half-sister? Why do I hate her so much?]',
-      speaker: CharacterName.jas, characterChanges: [
-    CharacterChart(name: CharacterName.jas, emotion: Emotion.talk),
-  ]),
+      speaker: CharacterName.jas,
+      characterChanges: [
+        CharacterChart(name: CharacterName.jas, emotion: Emotion.talk),
+      ]),
   ScriptItem(
       script: 'Your majesty...it wasn`t me!',
       speaker: CharacterName.theEmpress,
@@ -237,21 +254,24 @@ const openScript = [
   ScriptItem(
       script:
           '......Your tears are fake! Don`t think you can make me believe you!',
-      speaker: CharacterName.theEmperor, characterChanges: [
-    CharacterChart(name: CharacterName.theEmperor, emotion: Emotion.angrytalk),
-  ]),
+      speaker: CharacterName.theEmperor,
+      characterChanges: [
+        CharacterChart(
+            name: CharacterName.theEmperor, emotion: Emotion.angrytalk),
+      ]),
   ScriptItem(
       script:
           'If you don`t trust me, I will have to use my death to prove my innocence.',
-      speaker: CharacterName.theEmpress, characterChanges: [
-    CharacterChart(name: CharacterName.theEmpress, emotion: Emotion.tears),
-  ]),
+      speaker: CharacterName.theEmpress,
+      characterChanges: [
+        CharacterChart(name: CharacterName.theEmpress, emotion: Emotion.tears),
+      ]),
   ScriptItem(
       script:
-          'The Empress glanced at the Emperor seriously before lowering her head. She struggled to rise, looking as if she were ready to die to make her point.', 
-          characterChanges: [
-            CharacterChart(name: CharacterName.theEmpress, emotion: Emotion.tears),
-          ]),
+          'The Empress glanced at the Emperor seriously before lowering her head. She struggled to rise, looking as if she were ready to die to make her point.',
+      characterChanges: [
+        CharacterChart(name: CharacterName.theEmpress, emotion: Emotion.tears),
+      ]),
   ScriptItem(
       script:
           'The Emperor withdrew his hand, which had instinctively reached out to help her. His face was filled with hesitation, perhaps without even realizing that the Empress had already become so important to him.'),
@@ -280,11 +300,11 @@ const reOpenScript = [
   ScriptItem(script: 'Exploration missions for your country.'),
   ScriptItem(script: 'Earth, your home planet.'),
   ScriptItem(script: 'The orphanage, where you lived since ten.'),
-  ScriptItem(script: 'The crystal ball...'),
+  ScriptItem(script: 'The snow globe...'),
   ScriptItem(
       script: 'You are such a bad girl, Jas...No wonder your father left you.',
       speaker: CharacterName.unknown),
-  ScriptItem(script: 'The crystal ball shatters again.'),
+  ScriptItem(script: 'The snow globe shatters again.'),
   ScriptItem(script: '...'),
   ScriptItem(script: 'And once more, you hear that voice.'),
   ScriptItem(script: '......Jas?', speaker: CharacterName.system),

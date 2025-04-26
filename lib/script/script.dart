@@ -59,4 +59,3 @@ enum Scene {
   bbb,
   baa,
 }
-

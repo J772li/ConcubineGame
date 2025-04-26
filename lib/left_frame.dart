@@ -134,12 +134,10 @@ class LeftFrame extends SpriteAnimationComponent
         Vector2(game.size.x * 0.015, game.size.y * 0.65);
     final secondButtonPosition =
         Vector2(game.size.x * 0.015, game.size.y * 0.65 + 60);
-    final buttonSize = Vector2(200, 50);
     if (scene == Scene.reopening) {
       final obeyButton = Button(
         text: 'Obey the system',
         position: secondButtonPosition,
-        size: buttonSize,
         onPressed: () {
           onPressedGeneral(nextOptions[0]);
         },
@@ -149,7 +147,6 @@ class LeftFrame extends SpriteAnimationComponent
       final honestButton = Button(
         text: 'Be honest',
         position: firstButtonPosition,
-        size: buttonSize,
         onPressed: () {
           onPressedGeneral(nextOptions[0]);
         },
@@ -158,7 +155,6 @@ class LeftFrame extends SpriteAnimationComponent
       final obeyButton = Button(
         text: 'Obey the system',
         position: secondButtonPosition,
-        size: buttonSize,
         onPressed: () {
           onPressedGeneral(nextOptions[1]);
         },
@@ -184,7 +180,8 @@ class LeftFrame extends SpriteAnimationComponent
     chatBoxAction();
     scene = nextOptions['scene'];
     _isGoodEnding = nextOptions['scripts'] == trueEndingScript;
-    _isBadEnding = nextOptions['scripts'] == jadeObeyEndScript;
+    _isBadEnding = nextOptions['scripts'] == jadeObeyEndScript ||
+        nextOptions['scripts'] == obeyEndScript;
   }
 
   void restartOpening() {
@@ -195,8 +192,19 @@ class LeftFrame extends SpriteAnimationComponent
     chatBoxAction();
   }
 
+  void restartGame() {
+    parent?.add(PixelAnimation(isEnding: false));
+    clearAllComponents();
+    _scriptItems.addAll(openScript);
+    scene = Scene.opening;
+    _didRestart = false;
+    _isGoodEnding = false;
+    _isBadEnding = false;
+    parent?.removeWhere((component) => component is PixelAnimation);
+    chatBoxAction();
+  }
+
   List<Map<String, dynamic>> getNext(Scene scene) {
-    print("scene: $scene");
     if (scene == Scene.opening) {
       return [
         {
@@ -246,8 +254,8 @@ class LeftFrame extends SpriteAnimationComponent
           'scripts': trueEndingScript,
           'scene': Scene.aaa,
         },
-          {
-            'scripts': obeyEndScript,
+        {
+          'scripts': obeyEndScript,
           'scene': Scene.aab,
         }
       ];
