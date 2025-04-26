@@ -280,7 +280,7 @@ const reOpenScript = [
   ScriptItem(script: 'Exploration missions for your country.'),
   ScriptItem(script: 'Earth, your home planet.'),
   ScriptItem(script: 'The orphanage, where you lived since ten.'),
-  ScriptItem(script: 'The crystal ball.'),
+  ScriptItem(script: 'The crystal ball...'),
   ScriptItem(
       script: 'You are such a bad girl, Jas...No wonder your father left you.',
       speaker: CharacterName.unknown),
